@@ -17,20 +17,26 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Top Announcement Bar -->
+  <!-- Top Announcement Bar (Rotating Infinite Ticker) -->
   <aside class="announcement-bar" aria-label="Avisos e Promoções">
-    <div class="container announcement-inner">
-      <div class="announcement-item hidden-mobile">
-        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11"></path><path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2"></path><circle cx="7" cy="18" r="2"></circle><path d="M15 18H9"></path><circle cx="17" cy="18" r="2"></circle></svg>
-        <span>Entrega Garantida para todo o Brasil</span>
-      </div>
-      <div class="announcement-promo">
-        <span class="badge-fire">CUPOM ATIVO</span>
-        <span>Use <strong>FERRARI10</strong> e garanta <strong>10% OFF</strong> em todo o site!</span>
-      </div>
-      <div class="announcement-item hidden-mobile">
-        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
-        <span>Até 3x sem juros no cartão</span>
+    <div class="container announcement-carousel-wrapper">
+      <div class="announcement-track" id="announcementTrack">
+        <div class="announcement-slide active">
+          <span class="badge-fire">CUPOM ATIVO</span>
+          <span class="announcement-text">Use <strong>FERRARI10</strong> e garanta <strong>10% OFF</strong> em todo o site!</span>
+        </div>
+        <div class="announcement-slide">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11"></path><path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2"></path><circle cx="7" cy="18" r="2"></circle><path d="M15 18H9"></path><circle cx="17" cy="18" r="2"></circle></svg>
+          <span class="announcement-text"><strong>FRETE GRÁTIS</strong> para todo o Brasil em compras a partir de R$ 299</span>
+        </div>
+        <div class="announcement-slide">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+          <span class="announcement-text">Parcele em até <strong>3x sem juros</strong> no cartão ou ganhe desconto via <strong>PIX</strong></span>
+        </div>
+        <div class="announcement-slide">
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"></path></svg>
+          <span class="announcement-text"><strong>GRAVAÇÃO A LASER GRÁTIS:</strong> Personalize seu nome na lâmina sem custo adicional</span>
+        </div>
       </div>
     </div>
   </aside>
@@ -83,68 +89,124 @@
   <!-- Hero Carousel Section -->
   <section class="hero-carousel-section" id="hero" aria-label="Destaques">
     <div class="carousel-container" id="heroCarousel">
-      <!-- Slide 1: Ferrari Hero -->
-      <article class="carousel-slide active" style="background-image: linear-gradient(to right, rgba(13,13,14,0.92) 20%, rgba(13,13,14,0.65) 55%, rgba(13,13,14,0.3) 100%), url('assets/images/banner_ferrari_hero.jpg');">
-        <div class="container slide-content">
-          <span class="slide-tag">LANÇAMENTO EXCLUSIVO 2026</span>
-          <h1 class="slide-title">A CUTELARIA DE QUEM<br>ENTENDE DE <span class="text-glow">SABOR</span></h1>
-          <p class="slide-description">
-            “No dia a dia e na brasa, precisão é tudo. Reuni as melhores lâminas artesanais e tábuas da Churrasqueando para você cozinhar como um mestre.”
-          </p>
-          <div class="slide-actions">
-            <a href="#kit-destaque" class="btn btn-primary">
-              <span>CONHECER O KIT DO FERRARI</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </a>
-            <a href="#produtos" class="btn btn-secondary">VER VITRINE COMPLETA</a>
+      <!-- Slide 1: Ferrari Hero Principal -->
+      <article class="carousel-slide active" style="background-image: url('assets/images/banner_ferrari_hero.jpg');">
+        <div class="slide-overlay-adaptive">
+          <div class="container slide-content-wrapper">
+            <div class="slide-content adaptive-box">
+              <span class="slide-tag">LANÇAMENTO EXCLUSIVO 2026</span>
+              <h1 class="slide-title">A CUTELARIA DE QUEM<br>ENTENDE DE <span class="text-glow">SABOR</span></h1>
+              <p class="slide-description">
+                “No dia a dia e na brasa, precisão é tudo. Reuni as melhores lâminas artesanais e tábuas da Churrasqueando para você cozinhar como um mestre.”
+              </p>
+              <div class="slide-actions">
+                <a href="#kit-destaque" class="btn btn-primary">
+                  <span>CONHECER O KIT DO FERRARI</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+                <a href="#produtos" class="btn btn-secondary">VER VITRINE COMPLETA</a>
+              </div>
+              <div class="slide-stats">
+                <div class="stat-item">
+                  <span class="stat-number">+2.5M</span>
+                  <span class="stat-label">Seguidores no Brasil</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <span class="stat-number">Aço Nobre</span>
+                  <span class="stat-label">Retenção de Fio Brutal</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                  <span class="stat-number">100%</span>
+                  <span class="stat-label">Artesanal & Vitalício</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="slide-stats">
-            <div class="stat-item">
-              <span class="stat-number">+2.5M</span>
-              <span class="stat-label">Seguidores no Brasil</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-number">Aço Nobre</span>
-              <span class="stat-label">Retenção de Fio Brutal</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Artesanal & Vitalício</span>
+        </div>
+      </article>
+
+      <!-- Slide 2: NOVO BANNER - Ferrari Segurando a Faca com Orgulho -->
+      <article class="carousel-slide" style="background-image: url('assets/images/banner_ferrari_knife.jpg');">
+        <div class="slide-overlay-adaptive">
+          <div class="container slide-content-wrapper">
+            <div class="slide-content adaptive-box">
+              <span class="slide-tag highlight-gold">A LÂMINA PREFERIDA DO FERRARI</span>
+              <h2 class="slide-title">PRECISÃO CIRÚRGICA<br>E <span class="text-glow">FIO BRUTAL</span></h2>
+              <p class="slide-description">
+                “O peso balanceado que não cansa a mão e um corte que desliza na carne feito manteiga. A faca certa transforma qualquer receita.”
+              </p>
+              <div class="slide-actions">
+                <button class="btn btn-primary" onclick="quickAddToCart(2)">
+                  <span>COMPRAR FACA PICANHEIRA</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+                </button>
+                <a href="#produtos" class="btn btn-secondary">EXPLORAR FACAS</a>
+              </div>
             </div>
           </div>
         </div>
       </article>
 
-      <!-- Slide 2: Kit Ferrari Hero -->
-      <article class="carousel-slide" style="background-image: linear-gradient(to right, rgba(13,13,14,0.92) 20%, rgba(13,13,14,0.65) 55%, rgba(13,13,14,0.3) 100%), url('assets/images/banner_kit_ferrari.jpg');">
-        <div class="container slide-content">
-          <span class="slide-tag highlight-gold">EDIÇÃO LIMITADA COLECIONADOR</span>
-          <h2 class="slide-title">KIT ASSINATURA<br><span class="text-glow-gold">RAFAEL FERRARI</span></h2>
-          <p class="slide-description">
-            Faca Damasco 10" com empunhadura nobre, tábua de teca com canaleta profunda e garras de urso de alta densidade. Gravação a laser personalizada inclusa.
-          </p>
-          <div class="slide-actions">
-            <button class="btn btn-primary" onclick="quickAddToCart(1)">
-              <span>COMPRAR KIT COM 15% OFF</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-            </button>
-            <a href="#produtos" class="btn btn-secondary">DETALHES DO KIT</a>
+      <!-- Slide 3: NOVO BANNER - Ferrari no Grill com Tábua Nobre -->
+      <article class="carousel-slide" style="background-image: url('assets/images/banner_ferrari_grill.jpg');">
+        <div class="slide-overlay-adaptive">
+          <div class="container slide-content-wrapper">
+            <div class="slide-content adaptive-box">
+              <span class="slide-tag">SELEÇÃO GOURMET NA BRASA</span>
+              <h2 class="slide-title">CHURRASCO EM<br>OUTRO <span class="text-glow-gold">PATAMAR</span></h2>
+              <p class="slide-description">
+                “Tábuas de teca com canaleta profunda para não sujar sua bancada e conservar cada gota de suco da carne. Feitas para impressionar.”
+              </p>
+              <div class="slide-actions">
+                <a href="#produtos" class="btn btn-primary">
+                  <span>VER TÁBUAS & ACESSÓRIOS</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </a>
+                <a href="#kit-destaque" class="btn btn-secondary">VER KITS</a>
+              </div>
+            </div>
           </div>
         </div>
       </article>
 
-      <!-- Slide 3: Slicing Action -->
-      <article class="carousel-slide" style="background-image: linear-gradient(to right, rgba(13,13,14,0.92) 20%, rgba(13,13,14,0.65) 55%, rgba(13,13,14,0.3) 100%), url('assets/images/banner_slicing.jpg');">
-        <div class="container slide-content">
-          <span class="slide-tag">CORTE CIRÚRGICO NA BRASA</span>
-          <h2 class="slide-title">SUCULÊNCIA &<br>CONTROLE <span class="text-glow">TOTAL</span></h2>
-          <p class="slide-description">
-            Descubra o prazer de fatiar picanha, brisket e cortes especiais com suavidade e sem amassar as fibras da carne.
-          </p>
-          <div class="slide-actions">
-            <a href="#produtos" class="btn btn-primary">EXPLORAR FACAS ARTESANAIS</a>
+      <!-- Slide 4: Kit Ferrari Exclusivo -->
+      <article class="carousel-slide" style="background-image: url('assets/images/banner_kit_ferrari.jpg');">
+        <div class="slide-overlay-adaptive">
+          <div class="container slide-content-wrapper">
+            <div class="slide-content adaptive-box">
+              <span class="slide-tag highlight-gold">EDIÇÃO LIMITADA COLECIONADOR</span>
+              <h2 class="slide-title">KIT ASSINATURA<br><span class="text-glow-gold">RAFAEL FERRARI</span></h2>
+              <p class="slide-description">
+                Faca Damasco 10", tábua nobre de teca com canaleta e garras de urso em alumínio fundido. Acompanha gravação do seu nome a laser.
+              </p>
+              <div class="slide-actions">
+                <button class="btn btn-primary" onclick="quickAddToCart(1)">
+                  <span>COMPRAR KIT COM 15% OFF</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+                <a href="#produtos" class="btn btn-secondary">DETALHES DO KIT</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 5: Slicing Action na Brasa -->
+      <article class="carousel-slide" style="background-image: url('assets/images/banner_slicing.jpg');">
+        <div class="slide-overlay-adaptive">
+          <div class="container slide-content-wrapper">
+            <div class="slide-content adaptive-box">
+              <span class="slide-tag">SUCULÊNCIA & CONTROLE TOTAL</span>
+              <h2 class="slide-title">CORTE PERFEITO<br>SEM <span class="text-glow">AMASSAR</span></h2>
+              <p class="slide-description">
+                Fatie picanhas, briskets e cortes suculentos com maestria. A lâmina mantém a integridade e textura de cada pedaço.
+              </p>
+              <div class="slide-actions">
+                <a href="#produtos" class="btn btn-primary">VER TODA A VITRINE</a>
+              </div>
+            </div>
           </div>
         </div>
       </article>

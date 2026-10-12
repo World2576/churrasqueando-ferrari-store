@@ -198,6 +198,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // =========================================================================
+  // 3.1 ANNOUNCEMENT BAR ROTATING ENGINE (INFINITE TICKER)
+  // =========================================================================
+  const announcementSlides = document.querySelectorAll('.announcement-slide');
+  let currentAnnouncement = 0;
+
+  function initAnnouncementRotation() {
+    if (!announcementSlides.length || announcementSlides.length <= 1) return;
+
+    setInterval(() => {
+      announcementSlides[currentAnnouncement]?.classList.remove('active');
+      currentAnnouncement = (currentAnnouncement + 1) % announcementSlides.length;
+      announcementSlides[currentAnnouncement]?.classList.add('active');
+    }, 3600);
+  }
+
+  initAnnouncementRotation();
+
+  // =========================================================================
   // 4. PRODUCTS RENDERING & FILTERING
   // =========================================================================
   const productsGrid = document.getElementById('productsGrid');
