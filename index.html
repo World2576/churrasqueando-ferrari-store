@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Na Cozinha com o Ferrari | Seleção Oficial Churrasqueando</title>
+  <meta name="description" content="Eleve seu churrasco e culinária com a linha oficial de facas, tábuas nobres e kits selecionados por Rafael Ferrari em parceria com a Churrasqueando.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Staatliches&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Announcement Bar -->
+  <aside class="announcement-bar" aria-label="Avisos e Promoções">
+    <div class="container announcement-inner">
+      <div class="announcement-item hidden-mobile">
+        <span class="icon">🚚</span>
+        <span>Entrega Garantida para todo o Brasil</span>
+      </div>
+      <div class="announcement-promo">
+        <span class="badge-fire">CUPOM ATIVO</span>
+        <span>Use <strong>FERRARI10</strong> e garanta <strong>10% OFF</strong> em todo o site!</span>
+      </div>
+      <div class="announcement-item hidden-mobile">
+        <span class="icon">💳</span>
+        <span>Até 3x sem juros no cartão</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <a href="#hero" class="brand-link" aria-label="Página inicial">
+          <div class="brand-logo-text">
+            <span class="brand-main">NA COZINHA COM O <strong>FERRARI</strong></span>
+            <span class="brand-collab">
+              <span class="collab-dot"></span>
+              SELEÇÃO EXCLUSIVA POR <strong>CHURRASQUEANDO</strong>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="main-nav hidden-tablet" aria-label="Navegação Principal">
+        <a href="#kit-destaque" class="nav-item">Kit Assinatura</a>
+        <a href="#produtos" class="nav-item">Lojas & Produtos</a>
+        <a href="#sobre" class="nav-item">Sobre a Parceria</a>
+        <a href="#reels" class="nav-item">Vídeos & Receitas</a>
+        <a href="#avaliacoes" class="nav-item">Avaliações</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box hidden-mobile">
+          <input type="text" id="searchInput" placeholder="Buscar facas, tábuas..." aria-label="Buscar produtos">
+          <button type="button" class="btn-search-icon" aria-label="Buscar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+          </button>
+        </div>
+
+        <button class="cart-trigger-btn" id="openCartBtn" aria-label="Abrir Carrinho">
+          <div class="cart-icon-wrapper">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+            <span class="cart-badge" id="cartCount">0</span>
+          </div>
+          <div class="cart-meta hidden-mobile">
+            <span class="cart-title">Meu Carrinho</span>
+            <span class="cart-total-peek" id="cartHeaderTotal">R$ 0,00</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Carousel Section -->
+  <section class="hero-carousel-section" id="hero" aria-label="Destaques">
+    <div class="carousel-container" id="heroCarousel">
+      <!-- Slide 1: Ferrari Hero -->
+      <article class="carousel-slide active" style="background-image: linear-gradient(to right, rgba(13,13,14,0.92) 20%, rgba(13,13,14,0.65) 55%, rgba(13,13,14,0.3) 100%), url('assets/images/banner_ferrari_hero.jpg');">
+        <div class="container slide-content">
+          <span class="slide-tag">LANÇAMENTO EXCLUSIVO 2026</span>
+          <h1 class="slide-title">A CUTELARIA DE QUEM<br>ENTENDE DE <span class="text-glow">SABOR</span></h1>
+          <p class="slide-description">
+            “No dia a dia e na brasa, precisão é tudo. Reuni as melhores lâminas artesanais e tábuas da Churrasqueando para você cozinhar como um mestre.”
+          </p>
+          <div class="slide-actions">
+            <a href="#kit-destaque" class="btn btn-primary">
+              <span>CONHECER O KIT DO FERRARI</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+            <a href="#produtos" class="btn btn-secondary">VER VITRINE COMPLETA</a>
+          </div>
+          <div class="slide-stats">
+            <div class="stat-item">
+              <span class="stat-number">+2.5M</span>
+              <span class="stat-label">Seguidores no Brasil</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">Aço Nobre</span>
+              <span class="stat-label">Retenção de Fio Brutal</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Artesanal & Vitalício</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 2: Kit Ferrari Hero -->
+      <article class="carousel-slide" style="background-image: linear-gradient(to right, rgba(13,13,14,0.92) 20%, rgba(13,13,14,0.65) 55%, rgba(13,13,14,0.3) 100%), url('assets/images/banner_kit_ferrari.jpg');">
+        <div class="container slide-content">
+          <span class="slide-tag highlight-gold">EDIÇÃO LIMITADA COLECIONADOR</span>
+          <h2 class="slide-title">KIT ASSINATURA<br><span class="text-glow-gold">RAFAEL FERRARI</span></h2>
+          <p class="slide-description">
+            Faca Damasco 10" com empunhadura nobre, tábua de teca com canaleta profunda e garras de urso de alta densidade. Gravação a laser personalizada inclusa.
+          </p>
+          <div class="slide-actions">
+            <button class="btn btn-primary" onclick="quickAddToCart(1)">
+              <span>COMPRAR KIT COM 15% OFF</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+            <a href="#produtos" class="btn btn-secondary">DETALHES DO KIT</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3: Slicing Action -->
+      <article class="carousel-slide" style="background-image: linear-gradient(to right, rgba(13,13,14,0.92) 20%, rgba(13,13,14,0.65) 55%, rgba(13,13,14,0.3) 100%), url('assets/images/banner_slicing.jpg');">
+        <div class="container slide-content">
+          <span class="slide-tag">CORTE CIRÚRGICO NA BRASA</span>
+          <h2 class="slide-title">SUCULÊNCIA &<br>CONTROLE <span class="text-glow">TOTAL</span></h2>
+          <p class="slide-description">
+            Descubra o prazer de fatiar picanha, brisket e cortes especiais com suavidade e sem amassar as fibras da carne.
+          </p>
+          <div class="slide-actions">
+            <a href="#produtos" class="btn btn-primary">EXPLORAR FACAS ARTESANAIS</a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-arrow prev" id="carouselPrev" aria-label="Slide anterior">&#10094;</button>
+    <button class="carousel-arrow next" id="carouselNext" aria-label="Próximo slide">&#10095;</button>
+    <div class="carousel-indicators" id="carouselIndicators"></div>
+  </section>
+
+  <!-- Features / Advantages Strip -->
+  <section class="advantages-strip" aria-label="Vantagens">
+    <div class="container advantages-grid">
+      <div class="advantage-card">
+        <div class="adv-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18H3c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1h10c.6 0 1 .4 1 1v11"></path><path d="M14 9h4l4 4v4c0 .6-.4 1-1 1h-2"></path><circle cx="7" cy="18" r="2"></circle><path d="M15 18H9"></path><circle cx="17" cy="18" r="2"></circle></svg>
+        </div>
+        <div class="adv-text">
+          <span class="adv-title">ENTREGA NACIONAL</span>
+          <span class="adv-sub">Envio seguro para todo o Brasil</span>
+        </div>
+      </div>
+
+      <div class="advantage-card">
+        <div class="adv-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+        </div>
+        <div class="adv-text">
+          <span class="adv-title">ATÉ 3X SEM JUROS</span>
+          <span class="adv-sub">No cartão ou desconto via PIX</span>
+        </div>
+      </div>
+
+      <div class="advantage-card">
+        <div class="adv-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path><path d="m9 12 2 2 4-4"></path></svg>
+        </div>
+        <div class="adv-text">
+          <span class="adv-title">QUALIDADE GARANTIDA</span>
+          <span class="adv-sub">Cutelaria artesanal Churrasqueando</span>
+        </div>
+      </div>
+
+      <div class="advantage-card">
+        <div class="adv-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"></path></svg>
+        </div>
+        <div class="adv-text">
+          <span class="adv-title">GRAVAÇÃO GRÁTIS</span>
+          <span class="adv-sub">Seu nome na lâmina sem custo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlight Section: Kit Assinatura do Ferrari -->
+  <section class="signature-section" id="kit-destaque">
+    <div class="container">
+      <div class="signature-box">
+        <div class="signature-image-col">
+          <div class="img-badge-seal">ESCOLHA DO CHEF</div>
+          <img src="assets/images/banner_kit_ferrari.jpg" alt="Kit Assinatura Rafael Ferrari e Churrasqueando" class="signature-main-img">
+        </div>
+        <div class="signature-content-col">
+          <div class="pill-limited">
+            <span class="pulse-point"></span>
+            LOTE ESPECIAL LIMITADO A 150 UNIDADES
+          </div>
+          <h2 class="signature-heading">KIT CHURRASCO ASSINATURA <span>RAFAEL FERRARI</span></h2>
+          <p class="signature-desc">
+            O conjunto definitivo desenvolvido em conjunto com a <strong>Churrasqueando</strong>. Contém a nossa <strong>Faca Picanheira em Aço Damasco 10"</strong>, a <strong>Tábua Teca Nobre</strong> com canaleta coletora anti-vazamento e o par de <strong>Garras de Urso em Alumínio Maciço</strong>.
+          </p>
+
+          <ul class="signature-highlights">
+            <li><span>✓</span> Aço com tratamento térmico especial para máxima retenção de fio</li>
+            <li><span>✓</span> Tábua tratada com óleo mineral atóxico de alta durabilidade</li>
+            <li><span>✓</span> Gravação a laser personalizada do seu nome grátis</li>
+            <li><span>✓</span> Acompanha bainha em couro bovino legítimo com passador</li>
+          </ul>
+
+          <div class="signature-pricing">
+            <div class="price-stack">
+              <span class="price-original">De R$ 589,00</span>
+              <div class="price-current-row">
+                <span class="price-current">R$ 449,90</span>
+                <span class="price-badge-saving">-24% OFF</span>
+              </div>
+              <span class="price-installment">ou <strong>3x de R$ 149,96</strong> sem juros</span>
+            </div>
+
+            <button class="btn btn-primary btn-large" onclick="quickAddToCart(1)">
+              <span>ADICIONAR O KIT AO CARRINHO</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store / Products Grid Section -->
+  <section class="products-section" id="produtos">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">A CUTELARIA DO SEU CHURRASCO</span>
+        <h2 class="section-title">PRODUTOS SELECIONADOS PELO <span>FERRARI</span></h2>
+        <p class="section-desc">
+          Lâminas forjadas, tábuas exclusivas e acessórios profissionais com garantia Churrasqueando.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="category-tabs" id="categoryTabs">
+        <button class="cat-tab active" data-category="all">Todos os Produtos</button>
+        <button class="cat-tab" data-category="facas">Facas Artesanais</button>
+        <button class="cat-tab" data-category="tabuas">Tábuas Nobres</button>
+        <button class="cat-tab" data-category="kits">Kits Completos</button>
+        <button class="cat-tab" data-category="acessorios">Acessórios de Brasa</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Ferrari Chose Churrasqueando Section -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <div class="about-card">
+        <div class="about-text-col">
+          <span class="about-eyebrow">PALAVRA DO CHEF</span>
+          <h2 class="about-title">POR QUE EU ESCOLHI A <span>CHURRASQUEANDO</span>?</h2>
+          <div class="about-body">
+            <p>
+              "Quem me acompanha no <em>Na Cozinha com o Ferrari</em> sabe que eu não brinco em serviço quando o assunto é comida boa e equipamento confiável. Uma faca que perde o corte no meio de um churrasco ou uma tábua que empena na primeira lavagem estragam qualquer momento."
+            </p>
+            <p>
+              "Conheci a cutelaria da <strong>Churrasqueando</strong> e fiquei impressionado com o padrão de acabamento. O peso balanceado na mão, o fio que desliza na carne como manteiga e o carinho artesanal em cada detalhe de madeira e aço me conquistaram na hora."
+            </p>
+            <p>
+              "Esta loja é a realização de uma seleção que eu assino com orgulho. Cada produto aqui foi testado na minha bancada antes de ser indicado para vocês."
+            </p>
+          </div>
+          <div class="about-signature-footer">
+            <div class="chef-name-title">
+              <strong>Rafael Ferrari</strong>
+              <span>Criador de Conteúdo • @nacozinhacomoferrari</span>
+            </div>
+            <div class="auth-stamp">
+              <span>SELEÇÃO 100% HOMOLOGADA</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-img-col">
+          <div class="chef-photo-frame">
+            <img src="assets/images/ferrari_portrait.jpg" alt="Rafael Ferrari - Na Cozinha com o Ferrari" class="chef-portrait-img">
+            <div class="chef-insta-tag">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+              <span>@nacozinhacomoferrari</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reels / Videos Section -->
+  <section class="reels-section" id="reels">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">DIRETO DO INSTAGRAM</span>
+        <h2 class="section-title">EM AÇÃO NA <span>COZINHA & BRASA</span></h2>
+        <p class="section-desc">
+          Veja o Ferrari preparando receitas práticas e utilizando as peças artesanais no dia a dia.
+        </p>
+      </div>
+
+      <div class="reels-grid">
+        <!-- Reel 1 -->
+        <div class="reel-card">
+          <div class="reel-media">
+            <img src="assets/images/ferrari_reels1.jpg" alt="Receita Prática Ferrari">
+            <div class="reel-overlay">
+              <span class="play-btn">▶</span>
+              <span class="reel-time">00:45</span>
+            </div>
+          </div>
+          <div class="reel-info">
+            <span class="reel-tag">RECEITA DO DIA</span>
+            <p class="reel-title">O segredo do corte perfeito sem perder suculência</p>
+            <span class="reel-views">🔥 420 mil visualizações</span>
+          </div>
+        </div>
+
+        <!-- Reel 2 -->
+        <div class="reel-card">
+          <div class="reel-media">
+            <img src="assets/images/ferrari_reels2.jpg" alt="Doce de Leite Rápido e Dicas">
+            <div class="reel-overlay">
+              <span class="play-btn">▶</span>
+              <span class="reel-time">01:10</span>
+            </div>
+          </div>
+          <div class="reel-info">
+            <span class="reel-tag">DICA CULINÁRIA</span>
+            <p class="reel-title">Doce de leite rápido e como cuidar das suas tábuas</p>
+            <span class="reel-views">🔥 890 mil visualizações</span>
+          </div>
+        </div>
+
+        <!-- Reel 3 -->
+        <div class="reel-card">
+          <div class="reel-media">
+            <img src="assets/images/banner_slicing.jpg" alt="Fatiando Picanha">
+            <div class="reel-overlay">
+              <span class="play-btn">▶</span>
+              <span class="reel-time">00:35</span>
+            </div>
+          </div>
+          <div class="reel-info">
+            <span class="reel-tag">CHURRASCO NA BRASA</span>
+            <p class="reel-title">Testando a Faca Picanheira na brasa ardente</p>
+            <span class="reel-views">🔥 650 mil visualizações</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="reviews-section" id="avaliacoes">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">QUEM COMPRA, APROVA</span>
+        <h2 class="section-title">O QUE NOSSOS CLIENTES <span>ESTÃO DIZENDO</span></h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">
+            "Comprei o Kit Assinatura do Ferrari com a gravação do meu nome. Chegou super rápido e a faca tem um fio absurdo, corta até pensamento! A tábua é pesada e muito linda."
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">MT</div>
+            <div class="author-details">
+              <strong>Marcelo Torres</strong>
+              <span>Seguidor de São Paulo / SP • Comprou Kit Assinatura</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">
+            "Vi no vídeo do Ferrari usando a tábua de teca e comprei. A canaleta realmente segura todo o sumo da carne, a mesa fica limpa. O atendimento da Churrasqueando foi nota 10!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">CS</div>
+            <div class="author-details">
+              <strong>Camila Silveira</strong>
+              <span>Curitiba / PR • Comprou Tábua Nobre Teca</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">
+            "O desconto com o cupom FERRARI10 funcionou perfeitamente. A faca em aço damasco é uma verdadeira obra de arte. Vale cada centavo!"
+          </p>
+          <div class="review-author">
+            <div class="author-avatar">RL</div>
+            <div class="author-details">
+              <strong>Rodrigo Lima</strong>
+              <span>Belo Horizonte / MG • Comprou Faca Picanheira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Drawer Component -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrinho de Compras">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <h3>SEU CARRINHO</h3>
+        <span class="drawer-count" id="drawerItemCount">0 itens</span>
+      </div>
+      <button class="drawer-close-btn" id="closeCartBtn" aria-label="Fechar Carrinho">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="shipping-progress-box">
+      <div class="shipping-progress-text" id="shippingProgressText">
+        Faltam <strong>R$ 299,00</strong> para <strong>FRETE GRÁTIS!</strong>
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="shippingProgressFill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Items List Container -->
+    <div class="drawer-items" id="cartItemsList">
+      <!-- Items dynamically injected -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="drawer-footer">
+      <!-- Coupon Box -->
+      <div class="coupon-box">
+        <input type="text" id="couponInput" placeholder="Cupom de desconto" value="FERRARI10">
+        <button type="button" id="applyCouponBtn">APLICAR</button>
+      </div>
+      <div class="coupon-feedback" id="couponFeedback"></div>
+
+      <!-- Financial Calculation -->
+      <div class="totals-breakdown">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span id="summarySubtotal">R$ 0,00</span>
+        </div>
+        <div class="total-row discount-row" id="summaryDiscountRow" style="display: none;">
+          <span>Desconto Ferrari (10%)</span>
+          <span id="summaryDiscount">- R$ 0,00</span>
+        </div>
+        <div class="total-row">
+          <span>Frete</span>
+          <span id="summaryShipping" class="free-text">A calcular</span>
+        </div>
+        <div class="total-row grand-total">
+          <span>Total</span>
+          <span id="summaryGrandTotal">R$ 0,00</span>
+        </div>
+        <span class="installment-tip" id="summaryInstallment">ou em até 3x sem juros</span>
+      </div>
+
+      <button class="btn btn-primary btn-checkout" id="checkoutBtn">
+        <span>FINALIZAR PEDIDO</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+      </button>
+      <button class="btn-continue-shopping" id="continueShoppingBtn">Continuar Comprando</button>
+    </div>
+  </aside>
+
+  <!-- Checkout Success Modal -->
+  <div class="checkout-modal-backdrop" id="checkoutModalBackdrop">
+    <div class="checkout-modal-card">
+      <div class="modal-icon">🎉</div>
+      <h3>PEDIDO DEMONSTRATIVO RECEBIDO!</h3>
+      <p>
+        Este é um <strong>protótipo executivo da loja própria</strong> de Rafael Ferrari em parceria oficial com a <strong>Churrasqueando</strong>.
+      </p>
+      <div class="modal-summary-box" id="modalOrderSummary">
+        <!-- Summary populated by script -->
+      </div>
+      <p class="modal-footnote">
+        Em ambiente de produção, este fluxo conecta-se diretamente ao gateway de pagamento (Mercado Pago / Asaas / Pagar.me) e ao ERP da Churrasqueando.
+      </p>
+      <button class="btn btn-primary" id="closeModalBtn">OK, ENTENDIDO</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col brand-col">
+        <div class="brand-logo-text footer-brand">
+          <span class="brand-main">NA COZINHA COM O <strong>FERRARI</strong></span>
+          <span class="brand-collab">SELEÇÃO OFICIAL <strong>CHURRASQUEANDO</strong></span>
+        </div>
+        <p class="footer-about">
+          Uma união entre a paixão pela culinária de Rafael Ferrari e a maestria artesanal da cutelaria Churrasqueando. Produtos feitos para durar gerações.
+        </p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/nacozinhacomoferrari" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Ferrari">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+          </a>
+          <a href="https://www.youtube.com/@NaCozinhacomoFerrari" target="_blank" rel="noopener noreferrer" aria-label="YouTube do Ferrari">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+          <a href="https://www.churrasqueando.com/" target="_blank" rel="noopener noreferrer" aria-label="Site Oficial da Churrasqueando">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">PRODUTOS</h4>
+        <ul class="footer-nav">
+          <li><a href="#kit-destaque">Kit Assinatura</a></li>
+          <li><a href="#produtos">Facas Picanheiras</a></li>
+          <li><a href="#produtos">Tábuas de Corte Nobre</a></li>
+          <li><a href="#produtos">Acessórios de Brasa</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">ATENDIMENTO & SUPORTE</h4>
+        <ul class="footer-nav">
+          <li><a href="https://api.whatsapp.com/send/?phone=5519991284340" target="_blank" rel="noopener noreferrer">WhatsApp: (19) 99128-4340</a></li>
+          <li><span>E-mail: contato@churrasqueando.com</span></li>
+          <li><span>Rua Olavo Bilac, 836 - São Pedro / SP</span></li>
+          <li><span>Horário: Seg a Sex, das 8h às 18h</span></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">SEGURANÇA & PAGAMENTO</h4>
+        <div class="security-badges">
+          <span class="sec-badge">🔒 SSL 256-BIT ATIVO</span>
+          <span class="sec-badge">🛡️ GOOGLE SAFE BROWSING</span>
+        </div>
+        <p class="payment-hint">Aceitamos PIX, Boleto e todos os Cartões de Crédito em até 3x sem juros.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Na Cozinha com o Ferrari Store • Operado por Churrasqueando Cutelaria • CNPJ: 39.488.103/0001-88</p>
+        <p class="footer-powered">Feito para apresentação de parceria executiva</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
