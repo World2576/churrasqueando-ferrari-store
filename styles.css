@@ -142,6 +142,12 @@ button {
   align-items: center;
   gap: 8px;
   color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.announcement-item .icon {
+  color: var(--accent-gold);
+  flex-shrink: 0;
 }
 
 .announcement-promo {
@@ -180,6 +186,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 24px;
   height: 76px;
 }
 
@@ -199,6 +206,7 @@ button {
   letter-spacing: 0.04em;
   line-height: 1;
   color: var(--text-primary);
+  white-space: nowrap;
 }
 
 .brand-main strong {
@@ -215,6 +223,7 @@ button {
   letter-spacing: 0.08em;
   color: var(--text-muted);
   margin-top: 2px;
+  white-space: nowrap;
 }
 
 .collab-dot {
@@ -232,7 +241,7 @@ button {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 26px;
 }
 
 .nav-item {
@@ -241,6 +250,7 @@ button {
   color: var(--text-muted);
   position: relative;
   padding: 6px 0;
+  white-space: nowrap;
 }
 
 .nav-item::after {
@@ -271,7 +281,13 @@ button {
 
 .search-box {
   position: relative;
-  width: 220px;
+  width: 200px;
+}
+
+@media (max-width: 1240px) {
+  .search-box {
+    display: none !important;
+  }
 }
 
 .search-box input {
